@@ -10,6 +10,7 @@ describe('MATH FUNCTIONS', () => {
         expect(a + b).to.eq(c);
     })
 
+
     it.only('A - B = D', () => { //only
         expect(a - b).to.eq(d);
     })
