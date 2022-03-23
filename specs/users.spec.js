@@ -1,7 +1,6 @@
 import { expect } from 'chai'
 import UsersHelper from '../helpers/users.helper'
 import { getRandomItem } from '../helpers/common.helper'
-import ConfigHelper from "../helpers/config.helper";
 
 describe('USERS', () => {
     let userHelper = new UsersHelper()
@@ -10,11 +9,6 @@ describe('USERS', () => {
     before(async () => {
         await userHelper.create()
         userID = userHelper.response.body.id
-    })
-
-    after(async function() {
-        const configHelper = new ConfigHelper()
-        await configHelper.wipeData()
     })
 
     describe('USER CREATION', () => {
